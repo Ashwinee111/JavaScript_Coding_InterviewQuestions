@@ -8,42 +8,4 @@
   <body>
     <h1>Javascript Coding &amp; Technical Interview Questions</h1>
   </body>
-    <script>
-        // 1. How To find duplicate elements in Array ?
-            const number = [1, 2, 1, 3, 4, 5, 2, 6, 7];
-            const duplicateNum = number.filter(
-            (num, index, arr) => arr.indexOf(num) !== index
-            ); // finde duplicate element
-            console.log(duplicateNum);
-            const uniqueNum = number.filter(
-            (num, index, arr) => arr.indexOf(num) === index
-            ); // finde unique element
-            console.log(uniqueNum);
-
-        // 2. How To find max/min number in a given Array ?
-            const arrNumber = [25, 35, 70, 20, 100, 250];
-            // <-- 1st method -->
-            const minNumber = Math.min(...arrNumber);
-            const maxNumber = Math.max(...arrNumber);
-            console.log(minNumber);
-            console.log(maxNumber);
-            // <-- 2nd method -->
-            const maxNum = (arr) => arr.reduce((pre, curr) => (pre > curr ? pre : curr));
-            const max = maxNum(arrNumber)
-            console.log(max);
-            const minNum = (arr) => arr.reduce((pre, curr) => (pre < curr ? pre : curr));
-            const min = minNum(arrNumber)
-            console.log(min);
-
-        // 3. What is the difference between '==' and '===' operator ?
-            // <-- "==" is used to compare values -->
-            const x = 5
-            const y = "5"
-            console.log(x==5);
-            // <-- "===" is used to compare both value and dataTypes -->
-            const a = 5
-            const b = "5"
-            console.log(a===b);
-
-    </script>
 </html>
