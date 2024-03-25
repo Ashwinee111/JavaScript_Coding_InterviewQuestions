@@ -109,7 +109,7 @@ console.log(sumNumber);
 
 // ========================================================
 
-// // 8. How to find fictorial of a given array ?
+// 8. How to find fictorial of a given array ?
 const inputNumber = prompt("Enter a number");
 let fact = 1;
 if (inputNumber < 0) {
@@ -186,8 +186,7 @@ const palindrome = (str) => {
   let convertedToArray = str.split("").reverse().join("");
   if (convertedToArray === str) {
     return true;
-  } 
-  else {
+  } else {
     return false;
   }
 };
@@ -195,3 +194,51 @@ console.log(palindrome(string));
 
 // ========================================================
 
+// 12. How to find factor of a given integer ?
+const factorNum = prompt("Enter positive number");
+if (factorNum <= 0) {
+  console.log("Enter positive number");
+} else {
+  for (let i = 0; i < factorNum; i++) {
+    if (factorNum % i == 0) {
+      console.log(i);
+    }
+  }
+}
+console.log(factorNum);
+
+// ========================================================
+
+// 13. How to compare two Arrays are Equal or Not  ?
+let array1 = [1, 2, 3, 4, 5];
+let array2 = [5, 4, 3, 2, 1];
+let isArrSame =
+  array1.length === array2.length &&
+  array1.filter((element) => array2.includes(element));
+if (isArrSame) {
+  console.log(true);
+} else {
+  console.log(false);
+}
+
+// ========================================================
+
+// 14. How to find intersection of two arrays ?
+const arr1 = [1, 2, 3, 4, 6, 6, 8, 12];
+const arr2 = [4, 6, 6, 8, 12, 17, 9, 10];
+// Find intersection of arrays
+let intersection = arr1.filter((ele) => arr2.includes(ele));
+// Remove duplicates from intersection
+let final = intersection.filter(
+  (ele, index, arr) => arr.indexOf(ele) === index
+);
+console.log(final);
+
+// ========================================================
+
+// 15. How to find union of two arrays ?
+const num1 = [1, 2, 6, 7, 8, 17];
+const num2 = [4, 8, 6, 9, 19, 17];
+// Use Set to remove duplicates, then spread the Set back into an array
+const union = [...num1, ...num2];
+console.log([...new Set(union)]);
