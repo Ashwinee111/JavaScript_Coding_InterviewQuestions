@@ -242,3 +242,76 @@ const num2 = [4, 8, 6, 9, 19, 17];
 // Use Set to remove duplicates, then spread the Set back into an array
 const union = [...num1, ...num2];
 console.log([...new Set(union)]);
+
+// ========================================================
+
+// 16. How to convert first letter of string in uppercase ?
+let inputStr = prompt("Enter sentence");
+let uppercase = inputStr.slice(0, 1).toUpperCase();
+console.log(uppercase);
+
+// ========================================================
+
+// 17. How to find fibonacci sequence ?
+// NOTE: The fibonacci sequence is the integer sequence where the first two terms are 0 and 1. after that the next term is defined as the sum of ths previous two terms 0,1,1,2,3,5,8,13,21
+let firstNum = 0; // Initialize the first Fibonacci number
+let secondNum = 1; // Initialize the second Fibonacci number
+// Loop through 15 iterations to generate Fibonacci numbers
+for (let i = 0; i <= 15; i++) {
+  let temp = firstNum + secondNum; // Calculate the next Fibonacci number
+  firstNum = secondNum; // Update the value of firstNum
+  secondNum = temp; // Update the value of secondNum to the next Fibonacci number
+  console.log(secondNum); // Print out the current Fibonacci number
+}
+
+// ========================================================
+
+// 18. How to print Right Triangle, Pyramid, and Diamond shape ?
+// <-- Right Triangle -->
+for (let i = 1; i <= 6; i++) {
+  for (let j = 1; j <= i; j++) {
+    document.write("*");
+  }
+  document.write("<br />");
+}
+// <-- Pyramid -->
+for (let i = 1; i <= 6; i++) {
+  // First inner loop to print spaces
+  for (let j = 1; j <= 6 - i; j++) {
+    document.write("&nbsp;"); // Writing a space (HTML entity) instead of an asterisk
+  }
+
+  // Second inner loop to print asterisks
+  for (let k = 1; k <= i; k++) {
+    document.write("*"); // Writing an asterisk
+  }
+
+  document.write("<br />"); // Writing a line break after each row
+}
+// <-- Diamond -->
+for (let i = 1; i <= 6; i++) {
+  // First inner loop to print spaces
+  for (let j = 1; j <= 6 - i; j++) {
+    document.write("&nbsp;"); // Writing a space (HTML entity) instead of an asterisk
+  }
+
+  // Second inner loop to print asterisks
+  for (let k = 1; k <= i; k++) {
+    document.write("*"); // Writing an asterisk
+  }
+
+  document.write("<br />"); // Writing a line break after each row
+}
+for (let i = 1; i <= 6; i++) {
+  // First inner loop to print spaces
+  for (let j = 1; j <= i; j++) {
+    document.write("&nbsp;"); // Writing a space (HTML entity) instead of an asterisk
+  }
+
+  // Second inner loop to print asterisks
+  for (let k = 1; k <= 6 - i; k++) {
+    document.write("*"); // Writing an asterisk
+  }
+
+  document.write("<br />"); // Writing a line break after each row
+}
