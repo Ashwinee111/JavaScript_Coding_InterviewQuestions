@@ -315,3 +315,26 @@ for (let i = 1; i <= 6; i++) {
 
   document.write("<br />"); // Writing a line break after each row
 }
+
+// ========================================================
+
+// 19. How to Check the No of Occurrence of Character in String ?
+let str = prompt("Please enter string");
+let letter = prompt("Please enter letter");
+let strLength = str.length;
+let value = 0;
+for (let i = 0; i < strLength; i++) {
+  if (str[i] === letter) {
+    value++;
+  }
+}
+console.log(value);
+
+// ========================================================
+
+// 20. How to print the table of any user defined number ?
+let tableNumber = prompt("Enter Number");
+for (let i = 1; i <= 10; i++) {
+  let tableValue = tableNumber * i;
+  console.log(`${tableNumber} x ${i} = ${tableValue}`);
+}
